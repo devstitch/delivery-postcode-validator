@@ -1,0 +1,320 @@
+/* Header Styles */
+.wzc_containerbox h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Countdown Timer */
+.countdown-text {
+  margin: 0 0 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.countOrderTime {
+  color: #e63946;
+  font-weight: 600;
+}
+
+/* Form Box Styles */
+.wzc_formbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.wzccheck {
+  flex: 1;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.wzccheck:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* Button Styles */
+.wzcbtn,
+.wzc_btn {
+  min-width: 100px;
+  height: 40px;
+  padding: 8px 16px;
+  background: #2271b1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wzcbtn:hover,
+.wzc_btn:hover {
+  background: #135e96;
+}
+
+/* Tick Box Styles */
+.tickbox {
+  display: none;
+  position: absolute;
+  right: 140px;
+  top: 58%;
+  transform: translateY(-50%);
+}
+
+.tickbox svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Response Section Styles */
+.wzc_checkcode {
+  margin-top: 15px;
+}
+
+.response_pin {
+  padding: 10px 0;
+}
+
+.pincode-enterPincode {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Availability Message Styles */
+.wpcc_serviceavailtext {
+  margin: 10px 0;
+  padding: 10px;
+  background: #e8f5e9;
+  border-radius: 4px;
+  color: #2e7d32;
+}
+
+.serviceavailtxt {
+  font-weight: 500;
+}
+
+/* Delivery Info Styles */
+.wzc_avaitxt,
+.wzc_dlvrytxt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.wzc_delicons {
+  display: flex;
+  align-items: center;
+}
+
+.wzc_delicons svg {
+  width: 24px;
+  height: 24px;
+  fill: #666;
+}
+
+.wzc_avaddate p,
+.wzc_dlvrytxt p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.ddatecolor {
+  color: #2271b1;
+  font-weight: 500;
+}
+
+/* COD Section */
+.wzc_avacod p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Change Pincode State */
+.wzc_formbox.changepincode .wzccheck {
+  padding-right: 35px;
+}
+
+/* Error State */
+.wzc_notice_error {
+  padding: 10px;
+  margin: 10px 0;
+  background: #fff6f6;
+  border-left: 3px solid #dc3232;
+  color: #dc3232;
+}
+
+/* Success State */
+.wzc_notice_success {
+  padding: 10px;
+  margin: 10px 0;
+  background: #f0f8f0;
+  border-left: 3px solid #46b450;
+  color: #46b450;
+}
+
+/* Loading State */
+.wzc_formbox.loading::after {
+  content: "";
+  position: absolute;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #2271b1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 480px) {
+  .wzc_formbox {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .wzcbtn,
+  .wzc_btn {
+    width: 100%;
+  }
+
+  .tickbox {
+    right: 10px;
+  }
+
+  .wzc_formbox.loading::after {
+    right: 10px;
+  }
+}
+
+/* Return Policy Section */
+.wzc_return_policy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.wzc_return_policy svg {
+  width: 20px;
+  height: 20px;
+  fill: #666;
+}
+
+.wzc_return_policy p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Additional States */
+.wzccheck:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.wzcbtn:disabled,
+.wzc_btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Tooltip Styles */
+.wzc-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.wzc-tooltip:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+/* Animation Effects */
+.wzc_formbox .wzccheck,
+.wzc_formbox .wzcbtn,
+.wzc_formbox .wzc_btn {
+  transition: all 0.3s ease;
+}
+
+.wpcc_serviceavailtext,
+.wzc_avaitxt,
+.wzc_dlvrytxt {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input.wzc_btn {
+  padding: 0 !important;
+}
+/* Print Styles */
+@media print {
+  .wzc_containerbox {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .wzcbtn,
+  .wzc_btn {
+    display: none;
+  }
+
+  .wzc_checkcode {
+    page-break-inside: avoid;
+  }
+}
